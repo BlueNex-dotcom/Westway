@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Westway Vehicle Recovery & Transport | South West England | 24/7 Breakdown Recovery</title>
+<meta name="description" content="Westway Vehicle Recovery & Transport - Fast, reliable 24/7 vehicle recovery and car transport across South West England. Covering Devon, Cornwall, Somerset, Dorset & beyond. Get an instant quote online.">
+<meta name="keywords" content="vehicle recovery south west, car breakdown recovery devon, vehicle transport cornwall, recovery truck somerset, 24/7 breakdown recovery, car transport dorset, westway recovery">
+<meta name="robots" content="index, follow">
+<meta name="geo.region" content="GB-DEV">
+<meta name="geo.placename" content="South West England">
+<link rel="canonical" href="https://westwayvehiclerecovery.co.uk/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Westway Vehicle Recovery & Transport | South West England">
+<meta property="og:description" content="24/7 vehicle recovery and transport across South West England. Fast response, fair prices. Get an instant quote now.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://westwayvehiclerecovery.co.uk/">
+<meta property="og:locale" content="en_GB">
+
+<!-- Schema.org Local Business -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Westway Vehicle Recovery & Transport",
+  "description": "24/7 vehicle recovery and car transport across South West England including Devon, Cornwall, Somerset and Dorset.",
+  "url": "https://westwayvehiclerecovery.co.uk",
+  "telephone": "+447700000000",
+  "email": "info@westwayvehiclerecovery.co.uk",
+  "areaServed": [
+    {"@type": "State", "name": "Devon"},
+    {"@type": "State", "name": "Cornwall"},
+    {"@type": "State", "name": "Somerset"},
+    {"@type": "State", "name": "Dorset"},
+    {"@type": "State", "name": "Wiltshire"},
+    {"@type": "State", "name": "Gloucestershire"}
+  ],
+  "openingHours": "Mo-Su 00:00-23:59",
+  "priceRange": "££",
+  "serviceType": ["Vehicle Recovery", "Car Transport", "Breakdown Recovery", "Accident Recovery"]
+}
+</script>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!-- Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places,geometry&callback=initMaps" async defer></script>
+
+<style>
+  :root {
+    --orange: #E85D04;
+    --orange-dark: #C44C00;
+    --orange-light: #FFF3EC;
+    --charcoal: #1A1A2E;
+    --charcoal-mid: #2D2D44;
+    --steel: #4A5568;
+    --muted: #718096;
+    --light: #F7F8FC;
+    --white: #FFFFFF;
+    --border: #E2E8F0;
+    --success: #276749;
+    --success-bg: #F0FFF4;
+    --radius: 8px;
+    --radius-lg: 14px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--white);
+    color: var(--charcoal);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: var(--charcoal);
+    padding: 0 24px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 60px;
+    border-bottom: 3px solid var(--orange);
+  }
+
+  .nav-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+  }
+
+  .nav-logo span { color: var(--orange); }
+
+  .nav-cta {
+    background: var(--orange);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 14px;
+    padding: 9px 20px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+
+  .nav-cta:hover { background: var(--orange-dark); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--charcoal);
+    display: flex;
+    align-items: center;
+    padding: 80px 24px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; right: -200px;
+    width: 600px; height: 100%;
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 20px,
+      rgba(232,93,4,0.06) 20px,
+      rgba(232,93,4,0.06) 40px
+    );
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(232,93,4,0.15);
+    border: 1px solid rgba(232,93,4,0.4);
+    color: #FFA264;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+  }
+
+  .hero-badge::before {
+    content: '';
+    width: 8px; height: 8px;
+    background: var(--orange);
+    border-radius: 50%;
+    animation: pulse 1.8s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(48px, 7vw, 80px);
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+  }
+
+  h1 span { color: var(--orange); }
+
+  .hero-sub {
+    font-size: 18px;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 36px;
+    max-width: 520px;
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--orange);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 16px;
+    padding: 14px 28px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: background 0.2s, transform 0.1s;
+  }
+
+  .btn-primary:hover { background: var(--orange-dark); transform: translateY(-1px); }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 16px;
+    padding: 14px 28px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    border: 1.5px solid rgba(255,255,255,0.25);
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .btn-secondary:hover {
+    border-color: rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.06);
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .hero-stat-val {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--orange);
+    line-height: 1;
+    display: block;
+  }
+
+  .hero-stat-label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 2px;
+    display: block;
+  }
+
+  /* ── QUOTE CARD IN HERO ── */
+  .quote-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.35);
+    position: relative;
+    z-index: 2;
+  }
+
+  .quote-card-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+  }
+
+  .quote-card-sub {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+
+  .form-group {
+    margin-bottom: 16px;
+  }
+
+  label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--steel);
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: var(--charcoal);
+    background: var(--light);
+    transition: border-color 0.2s, background 0.2s;
+    outline: none;
+  }
+
+  input:focus, select:focus, textarea:focus {
+    border-color: var(--orange);
+    background: var(--white);
+  }
+
+  .input-autocomplete {
+    position: relative;
+  }
+
+  .autocomplete-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-top: none;
+    border-radius: 0 0 var(--radius) var(--radius);
+    z-index: 10;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+  }
+
+  .autocomplete-dropdown.open { display: block; }
+
+  .autocomplete-item {
+    padding: 10px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border);
+    color: var(--charcoal);
+  }
+
+  .autocomplete-item:hover { background: var(--light); }
+  .autocomplete-item:last-child { border-bottom: none; }
+
+  .price-display {
+    background: var(--orange-light);
+    border: 1.5px solid rgba(232,93,4,0.2);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 20px 0;
+    display: none;
+  }
+
+  .price-display.show { display: block; }
+
+  .price-breakdown {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 8px;
+    line-height: 1.8;
+  }
+
+  .price-total {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--orange);
+    line-height: 1;
+  }
+
+  .price-miles {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  .btn-quote {
+    width: 100%;
+    background: var(--orange);
+    color: var(--white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 14px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 8px;
+  }
+
+  .btn-quote:hover { background: var(--orange-dark); }
+  .btn-quote:disabled { background: #ccc; cursor: not-allowed; }
+
+  .form-note {
+    font-size: 12px;
+    color: var(--muted);
+    text-align: center;
+    margin-top: 12px;
+    line-height: 1.5;
+  }
+
+  /* ── PAYMENT SECTION ── */
+  .payment-section {
+    display: none;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+
+  .payment-section.show { display: block; }
+
+  .payment-section h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 16px;
+  }
+
+  #card-element {
+    background: var(--light);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px 14px;
+    margin-bottom: 16px;
+  }
+
+  .stripe-note {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 8px;
+  }
+
+  .stripe-lock {
+    width: 12px; height: 14px;
+    fill: var(--muted);
+  }
+
+  /* ── STRIP ── */
+  .trust-strip {
+    background: var(--orange);
+    padding: 14px 24px;
+    overflow: hidden;
+  }
+
+  .trust-strip-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 48px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .trust-item {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 0.3px;
+  }
+
+  .trust-item svg { flex-shrink: 0; }
+
+  /* ── SECTIONS ── */
+  section {
+    padding: 80px 24px;
+  }
+
+  .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(34px, 5vw, 52px);
+    font-weight: 800;
+    color: var(--charcoal);
+    line-height: 1.05;
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+  }
+
+  .section-intro {
+    font-size: 17px;
+    color: var(--muted);
+    max-width: 560px;
+    margin-bottom: 56px;
+    line-height: 1.7;
+  }
+
+  /* ── SERVICES ── */
+  .services-bg { background: var(--light); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+  }
+
+  .service-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+  }
+
+  .service-card:hover {
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    transform: translateY(-3px);
+    border-color: rgba(232,93,4,0.3);
+  }
+
+  .service-icon {
+    width: 48px; height: 48px;
+    background: var(--orange-light);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+  }
+
+  .service-icon svg { width: 26px; height: 26px; }
+
+  .service-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 10px;
+  }
+
+  .service-card p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  /* ── WHY US ── */
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .why-items {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .why-item {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+  }
+
+  .why-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    color: rgba(232,93,4,0.15);
+    line-height: 1;
+    min-width: 48px;
+  }
+
+  .why-text h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 6px;
+  }
+
+  .why-text p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  .why-cta-box {
+    background: var(--charcoal);
+    border-radius: var(--radius-lg);
+    padding: 40px 36px;
+    color: var(--white);
+  }
+
+  .why-cta-box h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 12px;
+    line-height: 1.1;
+  }
+
+  .why-cta-box p {
+    color: rgba(255,255,255,0.6);
+    font-size: 15px;
+    margin-bottom: 28px;
+    line-height: 1.65;
+  }
+
+  .phone-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--orange);
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    transition: color 0.2s;
+  }
+
+  .phone-link:hover { color: #FFA264; }
+
+  .whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 15px;
+    padding: 12px 22px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .whatsapp-btn:hover { background: #20b558; }
+
+  /* ── AREAS ── */
+  .areas-bg { background: var(--charcoal); }
+
+  .areas-bg h2 { color: var(--white); }
+  .areas-bg .section-intro { color: rgba(255,255,255,0.55); }
+
+  .areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+  }
+
+  .area-tag {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    color: rgba(255,255,255,0.8);
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .area-tag:hover {
+    background: rgba(232,93,4,0.15);
+    border-color: rgba(232,93,4,0.4);
+    color: var(--white);
+  }
+
+  .area-dot {
+    width: 6px; height: 6px;
+    background: var(--orange);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── PRICING ── */
+  .pricing-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 48px 40px;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 32px 0;
+  }
+
+  .pricing-item {
+    background: var(--light);
+    border-radius: var(--radius);
+    padding: 24px;
+    text-align: center;
+  }
+
+  .pricing-val {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--orange);
+    line-height: 1;
+    display: block;
+  }
+
+  .pricing-label {
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 6px;
+    display: block;
+  }
+
+  .pricing-note {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  /* ── CONTACT ── */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .contact-info h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 20px;
+  }
+
+  .contact-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .contact-icon {
+    width: 42px; height: 42px;
+    background: var(--orange-light);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .contact-icon svg { width: 20px; height: 20px; }
+
+  .contact-detail-text strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 2px;
+  }
+
+  .contact-detail-text span {
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .contact-detail-text a {
+    font-size: 14px;
+    color: var(--orange);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .contact-detail-text a:hover { text-decoration: underline; }
+
+  .contact-form-card {
+    background: var(--light);
+    border-radius: var(--radius-lg);
+    padding: 36px 32px;
+  }
+
+  .contact-form-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 20px;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .btn-submit {
+    width: 100%;
+    background: var(--charcoal);
+    color: var(--white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 13px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 8px;
+  }
+
+  .btn-submit:hover { background: var(--charcoal-mid); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--charcoal);
+    padding: 40px 24px;
+    border-top: 3px solid var(--orange);
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: 0.5px;
+  }
+
+  .footer-logo span { color: var(--orange); }
+
+  .footer-links {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--white); }
+
+  .footer-copy {
+    font-size: 13px;
+    color: rgba(255,255,255,0.3);
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    text-align: center;
+  }
+
+  /* ── TOAST ── */
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--charcoal);
+    color: var(--white);
+    padding: 14px 20px;
+    border-radius: var(--radius);
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 999;
+    transform: translateY(80px);
+    opacity: 0;
+    transition: all 0.3s;
+    border-left: 4px solid var(--orange);
+    max-width: 320px;
+  }
+
+  .toast.success { border-left-color: #48BB78; }
+  .toast.error { border-left-color: #FC8181; }
+  .toast.show { transform: translateY(0); opacity: 1; }
+
+  /* ── UTILITY ── */
+  .text-center { text-align: center; }
+
+  .loading {
+    display: inline-block;
+    width: 16px; height: 16px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: var(--white);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 860px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+    .quote-card { max-width: 500px; margin: 0 auto; }
+    .why-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .pricing-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 560px) {
+    nav { padding: 0 16px; }
+    section { padding: 60px 16px; }
+    .hero { padding: 80px 16px 40px; }
+    .hero-actions { flex-direction: column; }
+    .pricing-grid { grid-template-columns: 1fr; }
+    .footer-inner { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Westway<span>.</span></a>
+  <a href="#quote" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">Available 24 hours, 7 days a week</div>
+      <h1>South West<br>Vehicle<br><span>Recovery</span></h1>
+      <p class="hero-sub">Broken down in Devon, Cornwall, Somerset or beyond? Westway gets you moving fast — reliable recovery and transport at honest prices.</p>
+      <div class="hero-actions">
+        <a href="tel:+447700000000" class="btn-primary">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .99h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.9a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          Call Now
+        </a>
+        <a href="#quote" class="btn-secondary">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 7H6a2 2 0 00-2 2v9a2 2 0 002 2h9a2 2 0 002-2v-3M16 3h5m0 0v5m0-5l-9 9"/></svg>
+          Instant Quote
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <span class="hero-stat-val">24/7</span>
+          <span class="hero-stat-label">Always available</span>
+        </div>
+        <div>
+          <span class="hero-stat-val">£50</span>
+          <span class="hero-stat-label">Call out fee</span>
+        </div>
+        <div>
+          <span class="hero-stat-val">SW</span>
+          <span class="hero-stat-label">England covered</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUOTE CALCULATOR -->
+    <div class="quote-card" id="quote">
+      <div class="quote-card-title">Get an Instant Quote</div>
+      <p class="quote-card-sub">Enter pickup and drop-off postcodes for a price</p>
+
+      <div class="form-group">
+        <label for="name-input">Your name</label>
+        <input type="text" id="name-input" placeholder="John Smith" autocomplete="name">
+      </div>
+
+      <div class="form-group">
+        <label for="phone-input">Phone number</label>
+        <input type="tel" id="phone-input" placeholder="07700 000000" autocomplete="tel">
+      </div>
+
+      <div class="form-group">
+        <label for="from-postcode">Pickup postcode</label>
+        <div class="input-autocomplete">
+          <input type="text" id="from-postcode" placeholder="e.g. EX4 3PJ" autocomplete="off" maxlength="8">
+          <div class="autocomplete-dropdown" id="from-dropdown"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="to-postcode">Drop-off postcode</label>
+        <div class="input-autocomplete">
+          <input type="text" id="to-postcode" placeholder="e.g. PL1 2AB" autocomplete="off" maxlength="8">
+          <div class="autocomplete-dropdown" id="to-dropdown"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="vehicle-type">Vehicle type</label>
+        <select id="vehicle-type">
+          <option value="Car">Car</option>
+          <option value="Motorcycle">Motorcycle</option>
+          <option value="Van (up to 3.5t)">Van (up to 3.5t)</option>
+          <option value="4x4 / SUV">4x4 / SUV</option>
+          <option value="Other">Other (call for quote)</option>
+        </select>
+      </div>
+
+      <div class="price-display" id="price-display">
+        <div class="price-breakdown" id="price-breakdown"></div>
+        <div class="price-total" id="price-total"></div>
+        <div class="price-miles" id="price-miles"></div>
+      </div>
+
+      <button class="btn-quote" id="calc-btn" onclick="calculateRoute()">Calculate Price</button>
+
+      <!-- Stripe Payment Section -->
+      <div class="payment-section" id="payment-section">
+        <h3>Secure payment to confirm booking</h3>
+        <div class="form-group">
+          <label for="email-input">Email address (for receipt)</label>
+          <input type="email" id="email-input" placeholder="you@email.com" autocomplete="email">
+        </div>
+        <div id="card-element"></div>
+        <div id="card-errors" style="color:#E53E3E;font-size:13px;margin-top:6px;"></div>
+        <button class="btn-quote" id="pay-btn" onclick="handlePayment()" style="margin-top:12px;">
+          Pay &amp; Confirm Booking
+        </button>
+        <div class="stripe-note">
+          <svg class="stripe-lock" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path d="M10 6V4a4 4 0 00-8 0v2H1v8h10V6h-1zM4 4a2 2 0 014 0v2H4V4z" fill="currentColor"/></svg>
+          Secured by Stripe. We never store your card details.
+        </div>
+      </div>
+
+      <div id="quote-success" style="display:none; text-align:center; padding:12px 0;">
+        <div style="font-size:32px; margin-bottom:8px;">✅</div>
+        <div style="font-weight:600; color:#276749; font-size:16px; margin-bottom:4px;">Quote sent!</div>
+        <div style="font-size:13px; color:var(--muted);">We'll call you shortly to confirm your booking.</div>
+      </div>
+
+      <p class="form-note" id="form-note">No card required for a quote · We'll call you to confirm</p>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-strip-inner">
+    <div class="trust-item">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      Fast Response Times
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Fully Insured
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+      Family Run Business
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      Transparent Pricing
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services-bg" id="services">
+  <div class="section-inner">
+    <span class="section-label">What we do</span>
+    <h2>Recovery &amp; Transport<br>Services</h2>
+    <p class="section-intro">From breakdowns on the A30 to transporting a classic car — Westway handles it all across the South West.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg fill="none" stroke="#E85D04" stroke-width="2" viewBox="0 0 24 24"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <h3>Breakdown Recovery</h3>
+        <p>Stranded anywhere in the South West? We'll get to you fast and recover your vehicle to your chosen garage or destination.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg fill="none" stroke="#E85D04" stroke-width="2" viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3m-4 12H9m8-4h4a2 2 0 002-2v-4a2 2 0 00-2-2h-8l-2 2v4a2 2 0 002 2z"/></svg>
+        </div>
+        <h3>Vehicle Transport</h3>
+        <p>Need to move a car you've bought, sold, or stored? We provide reliable vehicle transport with full care for your vehicle.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg fill="none" stroke="#E85D04" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Accident Recovery</h3>
+        <p>Involved in an accident? We work quickly and professionally to recover your vehicle safely from any scene across the region.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg fill="none" stroke="#E85D04" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Classic &amp; Prestige</h3>
+        <p>Your special vehicle deserves special care. We handle classic cars, prestige motors and motorcycles with extra attention.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="about">
+  <div class="section-inner">
+    <div class="why-grid">
+      <div>
+        <span class="section-label">Why Westway</span>
+        <h2>Local. Fast.<br>Dependable.</h2>
+        <p class="section-intro">We know the South West roads inside out — from Exmoor's lanes to Cornwall's coastal routes.</p>
+        <div class="why-items">
+          <div class="why-item">
+            <span class="why-num">01</span>
+            <div class="why-text">
+              <h3>Always available</h3>
+              <p>Breakdowns don't keep business hours. We're on call 24 hours a day, 365 days a year — including Bank Holidays.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <span class="why-num">02</span>
+            <div class="why-text">
+              <h3>No hidden fees</h3>
+              <p>£50 call-out then £2.50 per mile. That's it. You'll know exactly what you're paying before we arrive.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <span class="why-num">03</span>
+            <div class="why-text">
+              <h3>Local knowledge</h3>
+              <p>We're a South West business serving South West people. We know every road, every shortcut, and every garage.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-cta-box">
+        <h3>Broken down right now?</h3>
+        <p>Don't wait — call us directly and we'll get to you as quickly as possible. Serving all of South West England.</p>
+        <a href="tel:+447700000000" class="phone-link">
+          <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .99h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.9a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          07700 000000
+        </a>
+        <a href="https://wa.me/447700000000" class="whatsapp-btn" target="_blank" rel="noopener">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section style="background:var(--light);" id="pricing">
+  <div class="section-inner text-center">
+    <span class="section-label">Simple pricing</span>
+    <h2>Honest Prices,<br>No Surprises</h2>
+    <p class="section-intro" style="margin:0 auto 40px;">We keep it straightforward. One call-out fee, then a simple per-mile rate. Use our calculator above for an exact quote.</p>
+    <div class="pricing-card">
+      <div class="pricing-grid">
+        <div class="pricing-item">
+          <span class="pricing-val">£50</span>
+          <span class="pricing-label">Call-out fee<br>(included in every job)</span>
+        </div>
+        <div class="pricing-item">
+          <span class="pricing-val">£2.50</span>
+          <span class="pricing-label">Per mile<br>(from your location)</span>
+        </div>
+      </div>
+      <p class="pricing-note">For example: a 20-mile recovery would be £50 + (20 × £2.50) = <strong>£100 total</strong>. Use the instant quote tool above for your exact price. We accept card and cash.</p>
+      <a href="#quote" class="btn-primary" style="display:inline-flex; margin-top:28px;">Get my exact quote →</a>
+    </div>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section class="areas-bg" id="areas">
+  <div class="section-inner">
+    <span class="section-label">Coverage area</span>
+    <h2>Covering All of<br>South West England</h2>
+    <p class="section-intro">From the tip of Cornwall to the Somerset Levels — if you're stuck in the South West, we can reach you.</p>
+    <div class="areas-grid">
+      <div class="area-tag"><span class="area-dot"></span>Devon</div>
+      <div class="area-tag"><span class="area-dot"></span>Cornwall</div>
+      <div class="area-tag"><span class="area-dot"></span>Somerset</div>
+      <div class="area-tag"><span class="area-dot"></span>Dorset</div>
+      <div class="area-tag"><span class="area-dot"></span>Wiltshire</div>
+      <div class="area-tag"><span class="area-dot"></span>Gloucestershire</div>
+      <div class="area-tag"><span class="area-dot"></span>Bristol</div>
+      <div class="area-tag"><span class="area-dot"></span>Bath</div>
+      <div class="area-tag"><span class="area-dot"></span>Exeter</div>
+      <div class="area-tag"><span class="area-dot"></span>Plymouth</div>
+      <div class="area-tag"><span class="area-dot"></span>Taunton</div>
+      <div class="area-tag"><span class="area-dot"></span>Truro</div>
+      <div class="area-tag"><span class="area-dot"></span>Bournemouth</div>
+      <div class="area-tag"><span class="area-dot"></span>Torquay</div>
+      <div class="area-tag"><span class="area-dot"></span>Barnstaple</div>
+      <div class="area-tag"><span class="area-dot"></span>Newquay</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <span class="section-label">Get in touch</span>
+        <h2>Always Here<br>When You Need Us</h2>
+        <p style="font-size:16px;color:var(--muted);margin-bottom:32px;line-height:1.7;">Have a question, need a quote, or want to book? Reach us by phone, WhatsApp, or the form.</p>
+        <div class="contact-detail">
+          <div class="contact-icon">
+            <svg fill="none" stroke="#E85D04" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .99h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.9a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div class="contact-detail-text">
+            <strong>Phone (24/7)</strong>
+            <a href="tel:+447700000000">07700 000000</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">
+            <svg fill="none" stroke="#E85D04" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="contact-detail-text">
+            <strong>Email</strong>
+            <a href="mailto:info@westwayvehiclerecovery.co.uk">info@westwayvehiclerecovery.co.uk</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">
+            <svg fill="none" stroke="#E85D04" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="contact-detail-text">
+            <strong>Hours</strong>
+            <span>24 hours a day, 7 days a week</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">
+            <svg fill="none" stroke="#E85D04" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-detail-text">
+            <strong>Area</strong>
+            <span>South West England</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-card">
+        <h3>Send us a message</h3>
+        <div class="form-group">
+          <label for="c-name">Name</label>
+          <input type="text" id="c-name" placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label for="c-phone">Phone</label>
+          <input type="tel" id="c-phone" placeholder="07700 000000">
+        </div>
+        <div class="form-group">
+          <label for="c-email">Email</label>
+          <input type="email" id="c-email" placeholder="you@email.com">
+        </div>
+        <div class="form-group">
+          <label for="c-msg">Message</label>
+          <textarea id="c-msg" placeholder="Tell us where you are and what you need..."></textarea>
+        </div>
+        <button class="btn-submit" onclick="sendContactForm()">Send Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Westway<span>.</span> Vehicle Recovery &amp; Transport</div>
+    <div class="footer-links">
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#areas">Coverage</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-copy">
+      &copy; 2025 Westway Vehicle Recovery &amp; Transport. South West England. All rights reserved.
+      <br>Website by Westway · <a href="#" style="color:rgba(255,255,255,0.3);">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ── CONFIG — REPLACE THESE ──────────────────────────────────────────────
+const EMAILJS_SERVICE_ID   = 'YOUR_EMAILJS_SERVICE_ID';
+const EMAILJS_TEMPLATE_ID  = 'YOUR_EMAILJS_TEMPLATE_ID';
+const EMAILJS_PUBLIC_KEY   = 'YOUR_EMAILJS_PUBLIC_KEY';
+const STRIPE_PUBLISHABLE_KEY = 'YOUR_STRIPE_PUBLISHABLE_KEY';
+const BROTHER_EMAIL        = 'YOUR_BROTHERS_EMAIL@email.com';
+const PHONE_NUMBER         = '07700000000'; // no spaces
+// ────────────────────────────────────────────────────────────────────────
+
+const CALLOUT_FEE = 50;
+const PER_MILE    = 2.50;
+
+let currentQuote = null;
+let stripe = null;
+let cardElement = null;
+let mapsReady = false;
+let distanceService = null;
+
+// Init EmailJS
+(function() {
+  emailjs.init(EMAILJS_PUBLIC_KEY);
+})();
+
+// Init Stripe (loads after page)
+function initStripe() {
+  if (typeof Stripe !== 'undefined') {
+    stripe = Stripe(STRIPE_PUBLISHABLE_KEY);
+    const elements = stripe.elements();
+    cardElement = elements.create('card', {
+      style: {
+        base: {
+          fontFamily: 'Inter, sans-serif',
+          fontSize: '15px',
+          color: '#1A1A2E',
+          '::placeholder': { color: '#718096' }
+        }
+      }
+    });
+    cardElement.mount('#card-element');
+    cardElement.on('change', function(event) {
+      document.getElementById('card-errors').textContent = event.error ? event.error.message : '';
+    });
+  }
+}
+
+// Load Stripe.js
+const stripeScript = document.createElement('script');
+stripeScript.src = 'https://js.stripe.com/v3/';
+stripeScript.onload = initStripe;
+document.head.appendChild(stripeScript);
+
+// Maps callback
+function initMaps() {
+  mapsReady = true;
+  distanceService = new google.maps.DistanceMatrixService();
+}
+
+// Toast helper
+function showToast(msg, type = 'info') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast show ' + type;
+  setTimeout(() => t.className = 'toast', 3500);
+}
+
+// Calculate route
+function calculateRoute() {
+  const from = document.getElementById('from-postcode').value.trim().toUpperCase();
+  const to   = document.getElementById('to-postcode').value.trim().toUpperCase();
+  const name = document.getElementById('name-input').value.trim();
+  const phone = document.getElementById('phone-input').value.trim();
+
+  if (!name || !phone) { showToast('Please enter your name and phone number.'); return; }
+  if (!from || !to)    { showToast('Please enter both postcodes.'); return; }
+
+  const btn = document.getElementById('calc-btn');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="loading"></span> Calculating...';
+
+  // Fallback: straight-line estimate if Maps not ready
+  if (!mapsReady || !distanceService) {
+    geocodeAndEstimate(from, to, name, phone);
+    return;
+  }
+
+  distanceService.getDistanceMatrix({
+    origins: [from + ', UK'],
+    destinations: [to + ', UK'],
+    travelMode: google.maps.TravelMode.DRIVING,
+    unitSystem: google.maps.UnitSystem.IMPERIAL
+  }, function(response, status) {
+    btn.disabled = false;
+    btn.textContent = 'Recalculate';
+
+    if (status !== 'OK' || response.rows[0].elements[0].status !== 'OK') {
+      showToast('Could not calculate route. Please call us for a quote.', 'error');
+      return;
+    }
+
+    const element = response.rows[0].elements[0];
+    const metres  = element.distance.value;
+    const miles   = metres / 1609.344;
+    showQuote(miles, name, phone, from, to);
+  });
+}
+
+function geocodeAndEstimate(from, to, name, phone) {
+  // Rough postcode distance via geocoding
+  const geo = new google.maps.Geocoder();
+  let fromLatLng, toLatLng;
+
+  geo.geocode({ address: from + ', UK' }, function(r1, s1) {
+    if (s1 !== 'OK') { document.getElementById('calc-btn').disabled = false; document.getElementById('calc-btn').textContent = 'Calculate Price'; showToast('Invalid pickup postcode.'); return; }
+    fromLatLng = r1[0].geometry.location;
+
+    geo.geocode({ address: to + ', UK' }, function(r2, s2) {
+      document.getElementById('calc-btn').disabled = false;
+      document.getElementById('calc-btn').textContent = 'Recalculate';
+      if (s2 !== 'OK') { showToast('Invalid drop-off postcode.'); return; }
+      toLatLng = r2[0].geometry.location;
+      const metres = google.maps.geometry.spherical.computeDistanceBetween(fromLatLng, toLatLng);
+      const miles = metres / 1609.344 * 1.3; // road factor
+      showQuote(miles, name, phone, from, to);
+    });
+  });
+}
+
+function showQuote(miles, name, phone, from, to) {
+  const roundedMiles = Math.round(miles);
+  const milesCost    = roundedMiles * PER_MILE;
+  const total        = CALLOUT_FEE + milesCost;
+  const vehicle      = document.getElementById('vehicle-type').value;
+
+  currentQuote = { name, phone, from, to, miles: roundedMiles, total, vehicle };
+
+  document.getElementById('price-breakdown').innerHTML =
+    '£' + CALLOUT_FEE.toFixed(2) + ' call-out + £' + PER_MILE.toFixed(2) + ' &times; ' + roundedMiles + ' miles';
+  document.getElementById('price-total').textContent  = '£' + total.toFixed(2);
+  document.getElementById('price-miles').textContent  = 'Estimated distance: ' + roundedMiles + ' miles';
+
+  document.getElementById('price-display').classList.add('show');
+  document.getElementById('payment-section').classList.add('show');
+  document.getElementById('calc-btn').textContent = 'Recalculate';
+
+  // Send quote email to brother
+  sendQuoteEmail(currentQuote);
+}
+
+function sendQuoteEmail(q) {
+  const params = {
+    to_email:    BROTHER_EMAIL,
+    customer_name:  q.name,
+    customer_phone: q.phone,
+    from_postcode:  q.from,
+    to_postcode:    q.to,
+    vehicle_type:   q.vehicle,
+    distance_miles: q.miles,
+    quote_total:    '£' + q.total.toFixed(2),
+    quote_breakdown: '£' + CALLOUT_FEE + ' call-out + £' + PER_MILE + ' x ' + q.miles + ' miles'
+  };
+
+  emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params)
+    .then(function() {
+      console.log('Quote email sent');
+    }, function(err) {
+      console.warn('EmailJS error:', err);
+    });
+}
+
+// Handle Stripe payment
+async function handlePayment() {
+  if (!stripe || !cardElement) {
+    showToast('Payment system not loaded. Please refresh.', 'error');
+    return;
+  }
+
+  const email = document.getElementById('email-input').value.trim();
+  if (!email) { showToast('Please enter your email address.'); return; }
+  if (!currentQuote) { showToast('Please calculate a price first.'); return; }
+
+  const btn = document.getElementById('pay-btn');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="loading"></span> Processing...';
+
+  // Create PaymentIntent via your backend
+  // IMPORTANT: You need a small backend endpoint (Netlify Function / Vercel Function is free)
+  // to create a Stripe PaymentIntent securely. Example below:
+  try {
+    const response = await fetch('/api/create-payment-intent', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        amount: Math.round(currentQuote.total * 100), // pence
+        currency: 'gbp',
+        metadata: {
+          customer_name:  currentQuote.name,
+          customer_phone: currentQuote.phone,
+          from: currentQuote.from,
+          to:   currentQuote.to,
+          miles: currentQuote.miles,
+          vehicle: currentQuote.vehicle
+        }
+      })
+    });
+
+    const { clientSecret, error: backendError } = await response.json();
+
+    if (backendError) {
+      showToast('Payment error: ' + backendError, 'error');
+      btn.disabled = false;
+      btn.textContent = 'Pay & Confirm Booking';
+      return;
+    }
+
+    const { error, paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
+      payment_method: {
+        card: cardElement,
+        billing_details: { name: currentQuote.name, email: email }
+      }
+    });
+
+    if (error) {
+      document.getElementById('card-errors').textContent = error.message;
+      btn.disabled = false;
+      btn.textContent = 'Pay & Confirm Booking';
+    } else if (paymentIntent.status === 'succeeded') {
+      document.getElementById('payment-section').classList.remove('show');
+      document.getElementById('price-display').classList.remove('show');
+      document.getElementById('quote-success').style.display = 'block';
+      document.getElementById('form-note').style.display = 'none';
+      showToast('Payment confirmed! We\'ll call you shortly.', 'success');
+    }
+  } catch(err) {
+    showToast('Network error. Please call us directly.', 'error');
+    btn.disabled = false;
+    btn.textContent = 'Pay & Confirm Booking';
+  }
+}
+
+// Contact form
+function sendContactForm() {
+  const name  = document.getElementById('c-name').value.trim();
+  const phone = document.getElementById('c-phone').value.trim();
+  const email = document.getElementById('c-email').value.trim();
+  const msg   = document.getElementById('c-msg').value.trim();
+
+  if (!name || !msg) { showToast('Please fill in your name and message.'); return; }
+
+  const params = {
+    to_email:    BROTHER_EMAIL,
+    from_name:   name,
+    from_phone:  phone,
+    from_email:  email,
+    message:     msg
+  };
+
+  const btn = document.querySelector('.btn-submit');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="loading"></span> Sending...';
+
+  emailjs.send(EMAILJS_SERVICE_ID, 'contact_template', params)
+    .then(function() {
+      showToast('Message sent! We\'ll be in touch soon.', 'success');
+      btn.textContent = 'Sent ✓';
+      document.getElementById('c-name').value = '';
+      document.getElementById('c-phone').value = '';
+      document.getElementById('c-email').value = '';
+      document.getElementById('c-msg').value = '';
+    }, function() {
+      showToast('Could not send message. Please call us.', 'error');
+      btn.disabled = false;
+      btn.textContent = 'Send Message';
+    });
+}
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+</body>
+</html>
